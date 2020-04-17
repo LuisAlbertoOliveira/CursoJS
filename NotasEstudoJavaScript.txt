@@ -1,0 +1,97 @@
+JAVASCRIPT
+
+HTML - texto
+CSS - estilo
+JS(JAVASCRIPT) - interação com o usuário
+	comandos:  	window.alert('Qualquer frase') : Faz aparecer uma janela na tela do usuário com a frase;
+				window.confirm('Mostra uma tela com uma pergunta e 2 opções de resposta: OK ou Cancel')
+				window.prompt('Alguma pergunta pra receber dados') : Abre uma janela com a pergunta e um campo para inserção de dados;
+				
+			
+				Case sensitive; não pode usar palavras reservadas(var, let, object)
+				
+			VARIÁVEIS - uma porção da memória onde se guarda um valor:
+								number (Não diferencia inteiro de real ou float como em outras linguagens);
+								string (conjunto de caracteres entre aspas simples, duplas ou crase;
+								boolean (true ou false; com letra minúscula)
+			TIPOS PRIMITIVOS: 
+								number (Infinity, NaN(Not a Number) 
+								string
+								boolean
+								null (vazio)
+								undefined(não definido; diferente de vazio)
+								object(Array)
+								function
+			
+10/04/20: Tratamento de dados - Curso JavaScript #06			
+			
+			3 principais tipos primitivos(number, string, boolean)
+			
+			
+			Como fazer comentários nas tecnologias:
+			HTML: <!-- Isso é um comentário em HTML -->
+			CSS : /* Isso é um comentário em CSS */
+			JS  : // Isso é um comentário em JS   ou /* Isso é um comentário em JS */
+			
+			concatenação se faz com o sinal de +
+			var nome = window.prompt('Qual o seu nome?')
+			ex.: window.alert('Seja bem vindo, ' + nome)
+			O sinal de + serve para adição e concatenação.
+					
+			O window.prompt sempre retorna uma string
+			
+			CONVERSÃO DE TIPOS
+			#String -> Number: há dois tipos
+				Number.parseInt() - Converte em Inteiro
+				Number.parseFloat() - Converte em Float
+				Number - Converte dependendo do que recebe de input. O próprio JS se encarrega
+			
+			#Números para String
+			String(n)
+			n.toString()
+			
+			TEMPLATE String: Usa entre crases para formatar. Usa-se o ${} que é chamado de placeholder
+			Os navegadores atuais já estão usando. Testar com outros navegadores(IExplorer)
+			Ex.:var nome = 'Luis'
+				var nota = 8
+				`O aluno ${nome} tirou a nota ${nota}`
+			
+			s.lenght - Retorna quantos carcateres tem uma string
+			s.toUpperCase() - tudo para MAÍUSCULAS
+			s.toLowerCase() - tudo para minúsculas 
+			
+			FORMATANDO NÚMEROS
+				n.toFIxed(2): determina que serão 2 casas decimais
+				n.toFIxed(2).replace('.',','): coloca 2 casas decimais e troca o ponto por vírgula
+				n1.toLocaleString('pt-br',{style: 'currency', currency:'BRL'}) // configurando vírgula no lugar de ponto.
+				
+17/04 - 
+#Setar número com cifrão
+num1.toLocaleString('pt-br', {style: 'currency' , currency: 'BRL'}) 
+# OPERADORES ARITIMÉTICOS:
+	+ : SOMA
+	- : SUBTRAÇÃO
+	* : MULTIPLICAÇÃO
+	/ : DIVISÃO
+	% : RESTO DA DIVISÃO
+	** : POTÊNCIA
+
+# ORDEM DE PRECEDÊNCIA 
+() : Parêntesis
+** : Potência
+* / %: Multiplicação, divisão e resto da divisão
++ - : soma e subtração
+
+# AUTO ATRIBUIÇÃO 
+var n = 3
+n = n+4  é o mesmo que n+=4 (simplificando)
+n = n-5  <=>  n-=5
+n = n*6  <=>  n*=6
+n = n/2  <=>  n/=2
+n = n**3 <=>  n**=3  (potência)
+n = n%5  <=>  n%=5   (resto da divisão)
+
+# INCREMENTO
+Ex.: var x = 5
+x = x + 1   <=> (o mesmo que) x++
+x = x - 1   <=> ( o mesmo que) x--
