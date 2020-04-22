@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            background: cornflowerblue;
+            color: white;
+            font: normal 18pt Arial;        
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM </h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat doloribus rerum sequi harum suscipit, corporis laboriosam perspiciatis! Officiis blanditiis laborum dolore qui cumque voluptatem fugit quisquam? Labore voluptates fugit maiores!</p>
+
+    <p>Aprendendo a trabalhar com   <strong>DOM </strong> em JavaScript</p>
+    <div class="msg"> Clique aqui  </div> 
+    
+    <script> 
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body
+        document.write(p1.innerHTML)
+       /*
+        var  d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'teste de Luis'*/
+         var d = window.document.getElementsByClassName('msg')[0]
+         d.innerHTML = 'Mudando de novo a DIV ...'
+
+    </script>
+</body>
+</html>
