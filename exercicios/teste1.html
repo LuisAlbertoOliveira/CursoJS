@@ -5,40 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Teste</title>
     <style>
-        /* Aqui começa a parte de ESTILO - CSS  */
-        h1{
-            font: normal 20pt Arial;
-            color: blue;
-        }
-
         body{
-            font: normal 30pt Arial;
-            color: purple;
-
+            color: blueviolet;
         }
-        
-        p{
-
-            font: : normal 20pt Arial;
+       input{
+           margin-top: 20px;
+           left: 0px;
+           
+       }
+    
+       div#form{
+           margin-top: 20px;
+           width: 400px;
+           height: 180px;
+           background: burlywood;
         }
-
-
     </style>
 </head>
 <body>
-    <h1>
-        Minha primeira página!
-    </h1>
- 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quis odit non. Fugiat quos atque eius in incidunt saepe est obcaecati officiis ratione nisi, magni aut, temporibus, mollitia quis ducimus!</p>
-
-
+    <div id="inicio"> Começo da página </div>
+    <input type="image" src="avatarLuis.jpg" alt="luis" id="figura" onmouseover="emcima()" onclick="clicou()" onmouseout="saiu()">
+    <div id="form"> 
+        Nome: 
+        <input type="text" id="nome">
+        Telefone:
+        <input type="tel" name="telefone" id="telefone">
+        Email: 
+        <input type="email" name="email" id="email">
+        <input type="button" id='button'value="Enviar" onclick="salvar()">
+     
+    </div>
+    
 
 <script>
-//começa aqui a parte de JavaScript
-    window.alert("Olá Mundo!")
-    var nome = String(window.prompt('Qual seu nome: ?'))
-    document.write(`Olá ${nome}!  Seja bem vindo!`)
+    var fig = window.document.querySelector('input#figura')
+    function salvar(){
+        var nome  = window.document.getElementById('nome').value
+        var telefone = window.document.getElementById('telefone').value
+        var email = window.document.querySelector('input#email').value
+        var dados = window.document.getElementById('form')
+        dados.style.font = '40pt'
+        dados.style.color = 'red'
+        dados.innerHTML =`Registro SALVO! <br>Nome: ${nome},<br> Telefone: ${telefone}<br>  Email: ${email} <br> <button onClick="window.location.reload();">Voltar </button>`
+    }
+
+   function emcima(){       
+       fig.style.filter = 'grayscale(100%)'
+   }
+   function saiu(){
+       fig.style.filter = 'grayscale(0%)'
+       fig.style.opacity ='1'
+   }
+   function clicou(){
+      // var figura = window.document.getElementById("figura")
+       fig.style.opacity = '0.2'
+   }
 </script>    
 </body>
 </html>
