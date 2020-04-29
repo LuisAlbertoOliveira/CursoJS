@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN - Testando condições em JavaScript</title>
+    <style>
+        /* As definições de estilo (CSS) estram aqui...  */
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas!!</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id='res'>
+        
+    </div>
+
+
+<script>
+        //Conteúdo JavaScript efetivo começa aqui...
+        
+        function calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>A sua velocidade é de <strong>${vel}Km/h </strong></p>`
+            if (vel > 80){
+                res.innerHTML +=` Você foi <strong>MULTADO!</strong>`
+            }
+            res.innerHTML += `<p> Ao dirigir, use sempre o cinto de segurança! </p>`
+        }
+    </script>
+    
+</body>
+</html>
