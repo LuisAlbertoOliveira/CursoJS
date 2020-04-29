@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se é Brasileiro </title>
+    <style>
+        body{
+            font: normal 20pt Times;
+        }
+        h1{
+            font: normal 50pt Times;
+        }
+        div{
+            margin-top: 5pt;
+            font: normal 20pt Times;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem vindo a Imigração!</h1>
+    Digite o país que você nasceu: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="result">
+    </div>
+    <script>
+        function verifica(){
+            var nacionalidade = window.document.getElementById('pais').value
+            var res = window.document.getElementById('result')
+            if(nacionalidade == 'Brasil' || nacionalidade == 'BRASIL' || nacionalidade == 'brasil'){
+                res.innerHTML=`Seja bem vindo, você é <mark><strong>BRASILEIRO!</strong></mark>`
+            } else{
+                res.innerHTML=`O país digitado foi : ${nacionalidade}  ->  Welcome! You're a FOREIGN.`
+            }
+                 
+        }
+    </script>
+</body>
+</html>
