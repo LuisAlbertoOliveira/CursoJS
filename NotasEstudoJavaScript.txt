@@ -95,3 +95,15 @@ n = n%5  <=>  n%=5   (resto da divisão)
 Ex.: var x = 5
 x = x + 1   <=> (o mesmo que) x++
 x = x - 1   <=> ( o mesmo que) x--
+
+20/04/2020
+OPERADORES RELACIONAIS
+> maior que 
+< menor que 
+>= maior ou igual que 
+<= menor ou igual que 
+== igual a 
+!= diferente de 
+
+LEMBRETE:  em JS a ATRIBUIÇÃO(recebe) é feita com um sinal de igual ( = ).
+
